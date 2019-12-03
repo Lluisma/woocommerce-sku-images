@@ -1,4 +1,4 @@
-# WooCommerce SKU images
+=== WooCommerce SKU images ===
 Contributors: lluisma
 Tags: woocommerce, images, SKU, admin
 Requires PHP: 5.3
@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Manage images for WooCommerce productes: massive upload, attachment and delete.
 
-## Description ##
+== Description ==
 
 WooCommerce SKU Images ervices makes basic eCommerce features like shipping more reliable by taking the burden off of your site’s infrastructure.
 
@@ -16,7 +16,7 @@ With WooCommerce Services, critical services are hosted on Automattic’s best-i
 
 To use the features, simply install this plugin and activate the ones you want directly in your dashboard. As we add more services, you’ll see more features available directly in WooCommerce - making setup simpler.
 
-# Massive upload and attachment #
+= Massive upload and attachment =
 Upload via FTPGive customers lower rates on their shipping. Create ready-to-print shipping labels for USPS directly in WooCommerce and take advantage of our special discount rate.
 
 = Collect accurate taxes at checkout =
