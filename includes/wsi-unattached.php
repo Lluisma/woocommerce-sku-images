@@ -382,7 +382,7 @@ echo "<br>"; echo (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$p
 
 	<h1>WooCommerce SKU Images : <?php echo __('Unattached images on <i>uploads</i> folder', 'woocommerce-sku-images' ); ?></h1>
 
-	<p><?php echo __('There may be images with SKU_index formated name on uploads folder that has\'nt been attached to correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
+	<p><?php echo __('There may be images with SKU_index formated name on <i>wp-content/uploads</i> folder that hasn\'t been attached to correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
 
 	<p>
 		<b><?php echo __('Attach & Add selected images', 'woocommerce-sku-images'); ?></b> : 

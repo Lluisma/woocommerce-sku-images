@@ -1,65 +1,67 @@
 # WooCommerce SKU images
-Contributors: lluisma
-Tags: woocommerce, images, SKU, admin
-Requires PHP: 5.3
-WC Tested up to: 5.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+- Contributors: lluisma
+- Tags: woocommerce, images, SKU, admin
+- Requires PHP: 5.3
+- WC Tested up to: 5.2
+- License: GPLv2 or later
+- License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Manage images for WooCommerce productes: massive upload, attachment and delete.
+Manage images for WooCommerce products: massive upload, attachment and delete.
+
+Just upload your images via FTP to the preload folder (defined on [settings](#Settings) page) and start to manage your product images.
 
 ## Description ##
 
-WooCommerce SKU Images ervices makes basic eCommerce features like shipping more reliable by taking the burden off of your site’s infrastructure.
+*WooCommerce SKU Images* performs a simple way to attach images to WooCommerce products (as thumbnail and gallery images).
 
-With WooCommerce Services, critical services are hosted on Automattic’s best-in-class infrastructure, rather than relying on your store’s hosting. That means your store will be more stable and faster.
+The only **requisite** is to set the image names according the pattern `[skuValue]_[index].jpg`.
+Example: for a product with 1234 as SKU value, we must name its images as following: 
+* ``1234_1.jpg``
+* ``1234_2.jpg``
+* ``1234_3.jpg``
+* etc..
 
-To use the features, simply install this plugin and activate the ones you want directly in your dashboard. As we add more services, you’ll see more features available directly in WooCommerce - making setup simpler.
+The plugin admits some other formats that will be normalized on the publishing process:
+* Blank spaces: ``1234 1.jpg`` >> ``1234_1.jpg`` 
+* Dashes: ``1234-1.jpg`` >> ``1234_1.jpg`` 
+* Parenthesis: ``1234(1).jpg`` >> ``1234_1.jpg`` 
 
-# Massive upload and attachment #
-Upload via FTPGive customers lower rates on their shipping. Create ready-to-print shipping labels for USPS directly in WooCommerce and take advantage of our special discount rate.
+### Pending uploads ###
 
-= Collect accurate taxes at checkout =
-We've got taxes for you - no need to enter tax rates manually.
+The list shows all the existing images in the preload folder and checks if each image name is SKU_index formatted.
 
-= Be ready to accept payments instantly =
-Have a Stripe account created on your behalf or accept PayPal Checkout payments without having to setup an account.
+You can only attach those images with a correct SKU could. The selected ones will be renamed with the normalized name (removing blank spaces, dashes, parenthesis, etc...), resized and attached to the correspondent SKU product as thubmnail and/or gallery images. 
 
-== Installation ==
+Theses images can be **added** tot  the existing gallery product images (even the first one as thumbnail if it does not exist) or you can **replace** the existing ones, which will be removed from the correspondent upload folder.
 
-This section describes how to install the plugin and get it working.
+Of course, you also can remove the images that you don't want to be attached.
+
+
+### Unnattached SKU images ###
+Sometimes you may find images with SKU_index formated name on ``wp-contents/uploads`` folders that hasn't been attached to correspondent SKU product (or have been deattached from).
+
+Just select them and will be setted as thubmnail and/or gallery images, added to the existing ones or just replaced them (which will be removed).
+
+As previous case, you can also can remove the images that you don't want to be attached.
+
+### Free SKU attachments ###
+There may be attachments with SKU_index formated title but not linked to correspondent SKU product. You can assign these attachments to its product (just adding them to existing images or replacing - and removing - them) or remove those that you want.
+
+## Installation ##
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 1. Install and activate WooCommerce if you haven't already done so
 
-<!-- 
-== Frequently Asked Questions ==
+### Settings ###
+* **Preload Folder**: Path to the directory where you upload your images via FTP
+* **Items per page**: Number of rows showed on images lists (default: 20)
+* **Optimized image size**: For large-sized images you can set this value (in pixels) to resize them and make them lighter.
 
-= Where can I see the source code for this plugin? =
+## Source code ##
+The source code is freely available in [GitHub](https://github.com/Lluisma/woocommerce-sku-images)
 
-The source code is freely available [in GitHub](https://github.com/Automattic/woocommerce-services).
-
--->
-
-<!--
-== Screenshots ==
-
-1. Buying a USPS shipping label for an order
-2. Setting up custom packages
-3. Selecting your preferred payment method
-4. Enabling automated taxes
-5. Creating a Stripe account from the setup wizard
-6. Checking on the health of WooCommerce Services
-7. Checking and exporting the label purchase reports
--->
-
-== Changelog ==
-
-= 1.0.0 =
+## Changelog ##
+### 1.0.0 ###
 * Beta release
 
-== Upgrade Notice ==
-
-= 1.0.0 =
-Beta release

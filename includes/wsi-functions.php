@@ -4,13 +4,6 @@
 	 * Add my new menu to the Admin Control Panel
 	 */
 
-
-// TODO
-//  * Settings: Size defecte
-//	* Load: Publish
-//	* Traduccions (tots els arxius)
-
-
 	// Register our wsi_settings_init to the admin_init action hook
  
 	add_action( 'admin_init', 'wsi_settings_init' );
@@ -111,7 +104,7 @@
 	 		'wsi_section_folders',									// Settings section (slug-name)
 	 		[ 'label_for' => 'wsi_field_dirpre',
 	 		  'is_folder' => true,
-	 		  'description' => __('Images upload directory', 'woocommerce-sku-images') ]
+	 		  'description' => __('Path to the directory where you upload your images via FTP', 'woocommerce-sku-images') ]
 	 		  														// Args for callback (you can add custom key value pairs to be used inside your callbacks)
 	 	);
 
@@ -121,7 +114,8 @@
 			'wsi_settings_fields',
 			'wsi-settings',
 			'wsi_section_folders',
-			[ 'label_for' => 'wsi_field_perpage' ]
+			[ 'label_for' => 'wsi_field_perpage',
+			  'description' => __('Number of rows showed on images lists', 'woocommerce-sku-images') ]
 		);
 
 	 	add_settings_field(
@@ -131,7 +125,7 @@
 	 		'wsi-settings',
 	 		'wsi_section_folders',
 			 [ 'label_for' => 'wsi_field_imgsize',
-			   'description' => __('In pixels', 'woocommerce-sku-images') ]
+			   'description' => __('For large-sized images you can set this value (in pixels) to resize them and make them lighter.', 'woocommerce-sku-images') ]
 	 	);
 
 		// register news settings
@@ -220,20 +214,11 @@
 
 //if(get_current_user_id()==1){
 																				// Apareixen els textos dins de la API!!!!
-		//$plugin_url = plugin_dir_url( dirname( plugin_basename( __FILE__ ) ) );
-		//$plugin_url = dirname( plugin_basename( __FILE__ ) );
 
 		$plugin_url = str_replace('/includes', '', dirname( plugin_basename( __FILE__ ) ) );
 		$plugin_url .= '/lang/';
 
 		load_plugin_textdomain( 'woocommerce-sku-images', false, $plugin_url);
-
-//		if (load_plugin_textdomain( 'woocommerce-sku-images', false, $plugin_url)) {
-//	  	if (load_plugin_textdomain( 'wsi-domain', false, $plugin_url)) {
-//		//       echo "<div style='padding-left:200px;'>$plugin_url OK</div>";		
-//		  } else {
-//		//       echo "<div style='padding-left:200px;'>$plugin_url <b>NOT</b></div>";		
-//		  }
 
 	}
 

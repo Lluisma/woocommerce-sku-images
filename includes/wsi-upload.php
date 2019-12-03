@@ -390,7 +390,7 @@
 
 <div class="wrap">
 	
-	<h1>WooCommerce SKU Images : <?php echo __('Publish images', 'woocommerce-sku-images' ); ?></h2>
+	<h1>WooCommerce SKU Images : <?php echo __('Pending uploads', 'woocommerce-sku-images' ); ?></h2>
 
 	<p><?php echo __('The list shows all the existing images in the preload folder (defined on settings page) and checks if each image name is SKU_index formatted.', 'woocommerce-sku-images' ); ?></p>
 
