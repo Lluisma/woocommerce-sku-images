@@ -2,18 +2,24 @@
 
 	ini_set('max_execution_time', '600');
 
+	// Settings -----------------------------------------------------------------------------------
+
 	$paged = ( $_GET['paged'] ) ? $_GET['paged'] : 1;
 
-	$per_page = get_settings( 'wsi_field_perpage' );
-	$img_size = get_settings( 'wsi_field_imgsize' );
-
-	$upload_cur = wp_upload_dir(); 
-	$upload_dir = $upload_cur['basedir'];
+	$per_page = is_numeric( get_settings('wsi_field_perpage') )  ?  get_settings('wsi_field_perpage')  :  20;
+	
+	$img_size = is_numeric( get_settings('wsi_field_imgsize') )  ?  get_settings('wsi_field_imgsize')  :  600;
 
 	$dirPRE = ABSPATH . get_option( 'wsi_field_dirpre' );
 
+	if (get_option('wsi_field_dirpre')=='') {
+		add_settings_error( 'wsi_messages', 'wsi_message', __( 'Not defined preload folder on plugin settings.', 'woocommerce-sku-images' ), 'error' );
+	}
+
 	$urlPRE = get_site_url() . '/' . get_option( 'wsi_field_dirpre' );
 
+	$upload_cur = wp_upload_dir(); 
+	$upload_dir = $upload_cur['basedir'];
 
 	// POST actions -------------------------------------------------------------------------------
 

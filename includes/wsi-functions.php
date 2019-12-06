@@ -19,7 +19,7 @@
 	function wsi_Add_My_Admin_Link() {
 
 		add_menu_page(
-			__( 'WooCommerce SKU Image Bulk', 'woocommerce-sku-images'), 		// Page title
+			__( 'WooCommerce SKU Images', 'woocommerce-sku-images'), 			// Page title
 			__( 'Woo SKU Images', 'woocommerce-sku-images'), 					// Menu text 
 			'manage_options', 													// Capability requirement
 			'wsi-menu',															// Menu-slug
@@ -39,8 +39,7 @@
 
 		add_submenu_page(
 			'wsi-menu', 
-			__( 'Unattached SKU images', 'woocommerce-sku-images'), 
-	
+			__( 'Unattached SKU images', 'woocommerce-sku-images'),
 			__( 'Unattached', 'woocommerce-sku-images'),
 			'manage_options', 
 			'wsi-submenu-1',
@@ -84,8 +83,8 @@
 
 		// add options to database
 		add_option('wsi_field_dirpre', '');
-		add_option('wsi_field_perpage');
-		add_option('wsi_field_imgsize');
+		add_option('wsi_field_perpage', 20);
+		add_option('wsi_field_imgsize', 600);
 
 		// register a new section in the "wsi-settings" page
 		add_settings_section(
@@ -102,7 +101,7 @@
 	 		'wsi_settings_fields',									// Callback: Fills the field with the desired form inputs.
 	 		'wsi-settings',											// Settings page (slug-name)
 	 		'wsi_section_folders',									// Settings section (slug-name)
-	 		[ 'label_for' => 'wsi_field_dirpre',
+	 		[ 'label' => 'wsi_field_dirpre',
 	 		  'is_folder' => true,
 	 		  'description' => __('Path to the directory where you upload your images via FTP', 'woocommerce-sku-images') ]
 	 		  														// Args for callback (you can add custom key value pairs to be used inside your callbacks)
@@ -114,8 +113,9 @@
 			'wsi_settings_fields',
 			'wsi-settings',
 			'wsi_section_folders',
-			[ 'label_for' => 'wsi_field_perpage',
-			  'description' => __('Number of rows showed on images lists', 'woocommerce-sku-images') ]
+			[ 'label' => 'wsi_field_perpage',
+			  'type' => 'number',
+			  'description' => __('Number of rows showed on images lists (default value: 20)', 'woocommerce-sku-images') ]
 		);
 
 	 	add_settings_field(
@@ -124,17 +124,15 @@
 	 		'wsi_settings_fields',
 	 		'wsi-settings',
 	 		'wsi_section_folders',
-			 [ 'label_for' => 'wsi_field_imgsize',
-			   'description' => __('For large-sized images you can set this value (in pixels) to resize them and make them lighter.', 'woocommerce-sku-images') ]
+			 [ 'label' => 'wsi_field_imgsize',
+			   'type' => 'number',
+			   'description' => __('For large-sized images you can set this value (in pixels) to resize them and make them lighter (default value: 600).', 'woocommerce-sku-images') ]
 	 	);
 
-		// register news settings
+		// register news settings (group, option name, args)
 		register_setting( 'wsi-options-grp', 'wsi_field_dirpre' );
 		register_setting( 'wsi-options-grp', 'wsi_field_perpage', ['type' => 'integer', 'default' => 20] );
 		register_setting( 'wsi-options-grp', 'wsi_field_imgsize', ['type' => 'integer', 'default' => 600] );
-			// Settings group name *		Whitelisted option key name (can include "general," "discussion", etc.)
-			// Option name *				The name of an option to sanitize and save
-			// $args 						[type, description, sanitize_callback, show_in_rest, default ]
 
 	}
 
@@ -148,13 +146,14 @@
 	function wsi_settings_fields( $args ) {
 
 		// get the value of the setting we've registered with register_setting()
-		$label_for = esc_attr( $args['label_for'] );
-	 	$option    = esc_attr( get_option( $label_for ) );
-	 	if (isset($args['is_folder'])) {
+		$label = esc_attr( $args['label'] );
+		$value = esc_attr( get_option( $label ) );
+		$type  = isset($args['type']) ? $args['type'] : 'text';
+		if (isset($args['is_folder'])) {
 	 		echo ABSPATH;
 	 	}
-		echo "<input name=\"" . $label_for . "\" id=\"" . $label_for . "\" type=\"text\" value=\"" . $option . "\" />";
-		echo "<p><i>" . esc_attr( $args['description'] ) . "</i></p>";
+		echo '<input name="' . $labelr . '" id="' . $label . '" type="' . $type . '" value="' . $value . '" />';
+		echo '<p><i>' . esc_attr( $args['description'] ) . '</i></p>';
 
 	}
 

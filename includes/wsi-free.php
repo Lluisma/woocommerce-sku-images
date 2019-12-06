@@ -1,9 +1,12 @@
 ﻿<?php 
 
+	// Settings -----------------------------------------------------------------------------------
+
 	$paged = ( $_GET['paged'] ) ? $_GET['paged'] : 1;
 
-	$per_page = get_settings( 'wsi_field_perpage' );
+	$per_page = is_numeric( get_settings('wsi_field_perpage') )  ?  get_settings('wsi_field_perpage')  :  20;
 
+	
 
 	// POST actions -------------------------------------------------------------------------------
 
