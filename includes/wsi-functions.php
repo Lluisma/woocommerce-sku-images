@@ -81,11 +81,6 @@
 
 	function wsi_settings_init() {
 
-		// add options to database
-		add_option('wsi_field_dirpre', '');
-		add_option('wsi_field_perpage', 20);
-		add_option('wsi_field_imgsize', 600);
-
 		// register a new section in the "wsi-settings" page
 		add_settings_section(
 		 	'wsi_section_folders',									// Id
@@ -129,10 +124,15 @@
 			   'description' => __('For large-sized images you can set this value (in pixels) to resize them and make them lighter (default value: 600).', 'woocommerce-sku-images') ]
 	 	);
 
-		// register news settings (group, option name, args)
+
+		add_option('wsi_field_dirpre', '');
 		register_setting( 'wsi-options-grp', 'wsi_field_dirpre' );
-		register_setting( 'wsi-options-grp', 'wsi_field_perpage', ['type' => 'integer', 'default' => 20] );
-		register_setting( 'wsi-options-grp', 'wsi_field_imgsize', ['type' => 'integer', 'default' => 600] );
+
+		add_option('wsi_field_perpage', 20);
+		register_setting( 'wsi-options-grp', 'wsi_field_perpage' );
+
+		add_option('wsi_field_imgsize', 600);
+		register_setting( 'wsi-options-grp', 'wsi_field_imgsize' );
 
 	}
 
@@ -152,10 +152,11 @@
 		if (isset($args['is_folder'])) {
 	 		echo ABSPATH;
 	 	}
-		echo '<input name="' . $labelr . '" id="' . $label . '" type="' . $type . '" value="' . $value . '" />';
+		echo '<input name="' . $label . '" id="' . $label . '" type="' . $type . '" value="' . $value . '" />';
 		echo '<p><i>' . esc_attr( $args['description'] ) . '</i></p>';
 
 	}
+
 
 	// Function pages =============================================================================
 
@@ -186,9 +187,9 @@
 	 
 	 	settings_errors( 'wsi_messages' );
 
-		echo "<div class=\"wrap\">
+		echo '<div class="wrap">
 				<h1>WooCommerce SKU Images</h1>
-				<form action=\"options.php\" method=\"post\">";
+				<form action="options.php" method="post">';
 
 		// output security fields for the registered setting "wsi"
 		settings_fields( 'wsi-options-grp' );
@@ -205,14 +206,11 @@
 	}
 
 
-	// Load the text domain =======================================================================
+	// Load the text domain (over header )=========================================================
 
-	add_action( 'plugins_loaded', 'wsi_plugin_load_text_domain' );				// Apareix en portada, sobre la capçalera !!!!!!!!!!
+	add_action( 'plugins_loaded', 'wsi_plugin_load_text_domain' );
 
 	function wsi_plugin_load_text_domain() {
-
-//if(get_current_user_id()==1){
-																				// Apareixen els textos dins de la API!!!!
 
 		$plugin_url = str_replace('/includes', '', dirname( plugin_basename( __FILE__ ) ) );
 		$plugin_url .= '/lang/';

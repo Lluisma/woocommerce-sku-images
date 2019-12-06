@@ -10,11 +10,16 @@
 	
 	$img_size = is_numeric( get_settings('wsi_field_imgsize') )  ?  get_settings('wsi_field_imgsize')  :  600;
 
-	$dirPRE = ABSPATH . get_option( 'wsi_field_dirpre' );
+	$dirPRE = ABSPATH . get_option('wsi_field_dirpre');
 
 	if (get_option('wsi_field_dirpre')=='') {
 		add_settings_error( 'wsi_messages', 'wsi_message', __( 'Not defined preload folder on plugin settings.', 'woocommerce-sku-images' ), 'error' );
-	}
+	} else {
+		if (!is_dir(ABSPATH . get_option('wsi_field_dirpre'))) {
+			add_settings_error( 'wsi_messages', 'wsi_message', __( 'The preload folder defined on plugin settings does not exist.', 'woocommerce-sku-images' ), 'error' );
+			$dirPRE = ABSPATH;
+		}
+	} 
 
 	$urlPRE = get_site_url() . '/' . get_option( 'wsi_field_dirpre' );
 
@@ -251,7 +256,7 @@
 					if ($published) {
 						$curr_product = array();
 						$curr_product['ID'] = $product_id;
-						$curr_product['post_status'] = 'publish';
+						$curr_product['post_status'] = 'publish';r
 						wp_update_post( $curr_product );
 					}
 
