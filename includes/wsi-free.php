@@ -287,22 +287,23 @@
 
 	<h1>WooCommerce SKU Images : <?php echo __('Free attachments', 'woocommerce-sku-images' ); ?></h1>
 
-	<p><?php echo __('There may be attachments with SKU_index formated title but not linked to correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
-
-	<p>
-		<b><?php echo __('Add selected attachments', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist).', 'woocommerce-sku-images' ); ?>
-	</p>
-		
-	<p>
-		<b><?php echo __('Replace with selected attachments', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>).', 'woocommerce-sku-images' ); ?>
-	</p>
-		
-	<p>
-		<b><?php echo __('Remove selected attachments', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Remove the selected ones on last column <i>checkboxes</i>.', 'woocommerce-sku-images' ); ?>
-	</p>
+	<div class="wsi-callout">
+		<p><?php echo __('There may be attachments with SKU_index formated title but not linked to correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
+		<a id="wsi-info" nohref>
+			<span class="dashicons dashicons-info"></span>
+			<?php echo __('Read more'); ?>...
+		<p class="wsi-info">
+			<b><?php echo __('Add selected attachments', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist).', 'woocommerce-sku-images' ); ?>
+		<p class="wsi-info">
+			<b><?php echo __('Replace with selected attachments', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>).', 'woocommerce-sku-images' ); ?>
+		</p>
+		<p class="wsi-info">
+			<b><?php echo __('Remove selected attachments', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Remove the selected ones on last column <i>checkboxes</i>.', 'woocommerce-sku-images' ); ?>
+		</p>
+	</div>
 
 
 	<hr class="wsi_hr">
@@ -343,7 +344,7 @@
 					<th>GUID</th>
 					<th><?php echo __('Title'); ?> / <?php echo __('Name'); ?></th>
 					<th>SKU</th>
-					<th><?php echo __('SKU published images','woocommerce-sku-images'); ?></th>
+					<th><?php echo __('Product attachments', 'woocommerce-sku-images'); ?></th>
 					<th><?php echo __('Comment'); ?></th>
 					<th><?php echo __('Remove'); ?> <input id="wsi-check-del" type="checkbox" /></th>
 				</tr>
@@ -398,7 +399,7 @@
 
 					} else {
 
-						$msg = __('Not existing product with this SKU','woocommerce-sku-images');
+						$msg = __('There are no products with this SKU','woocommerce-sku-images');
 
 					}
 
@@ -506,6 +507,10 @@ $( document ).ready(function() {
 		}
 
     });
+
+	$("#wsi-info").click( function(e) {
+		$(".wsi-info").toggle();
+	})
 
 });
 

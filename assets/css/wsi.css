@@ -8,3 +8,23 @@
 .wsi_hr {
   clear:both;	
 }
+
+.wsi-info {
+  display:none;
+}
+
+.wsi-callout {
+  background:#e5f5fa;
+  border-color:#00a0d2;
+  padding: 1em 3em 1em 3.7em;
+  margin-bottom: 1.5em;
+  overflow: auto;
+  position: relative;
+  border-width: 0 0 0 5px;
+  border-style: solid;
+  min-width: 170px;
+}
+
+#wsi-info {
+  cursor: pointer;
+}

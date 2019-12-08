@@ -10,7 +10,7 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language:ca\n"
+"Language:es\n"
 "MIME-Version: 1.0\n"
 
 #: 
@@ -18,247 +18,247 @@ msgstr ""
 #: 
 # wpml-name: d133276c3587ef03ffd4f00b567e191e
 msgid "There are no products with this SKU"
-msgstr "No hi ha productes amb aquest SKU"
+msgstr "No hay productos con este SKU"
 
 # wpml-name: 066bfb738cef40f19b3ed73bacbff9f0
 msgid "Product attachments"
-msgstr "Imatges de producte"
+msgstr "Imágenes de producto"
 
 # wpml-name: ab9cc2319224c9ed53215bce9f060254
 msgid "Normalized Filename"
-msgstr "Nom normalitzat"
+msgstr "Nombre normalizado"
 
 # wpml-name: 0fa4e9466779d582d77a4c1a44006160
 msgid "Original Filename"
-msgstr "Nom original"
+msgstr "Nombre original"
 
 # wpml-name: f1d01e584fca1d2ff7fdf036e8772e93
 msgid "Pending images"
-msgstr "Imatges pendents"
+msgstr "Imágenes pendientes"
 
 # wpml-name: 531a46b9467261ea1b3834b6ec1cb49c
 msgid "Remove selected images from upload folder"
-msgstr "Eliminar de la carpeta <i>upload</i> les imatges seleccionades"
+msgstr "Eliminar de la carpeta <i>upload</i> las imágenes seleccionadas"
 
 # wpml-name: 033d2aa3fa45619446851b5d440e8b51
 msgid "Upload & Replace with selected images"
-msgstr "Penja & Reemplaça amb les imatges seleccionades"
+msgstr "Sube & Reemplaza con las imágenes seleccionadas"
 
 # wpml-name: e64ebc5a1e7461dab48ceb8bed8be8db
 msgid "Upload & Add selected images"
-msgstr "Pujar & Afegir imatges seleccionades"
+msgstr "Subir & Añadir imágenes seleccionadas"
 
 # wpml-name: 99a63ce83a8f3c415fa52067b4b52bb2
 msgid "Images with a correct SKU could be renamed with the normalized name (removing blank spaces, dashes, parenthesis, etc...), resized and attached to the correspondent SKU product. You can perform the following actions:"
-msgstr "A les imatges amb un SKU correcte se'ls hi pot normalitzar el nom (eliminar espais en blanc, guions mitjos, parèntesis, etc...), redimensionar i vincular al producte SKU corresponent. Podeu fer-hi les següents accions:"
+msgstr "A las imágenes con un SKU correcto se las puede normalizar el nombre (eliminar espaicios en blanco, guiones medios, paréntesis, etc...), redimensionar y vincular al producto SKU correspondiente. Podéis realizar las siguientes acciones:"
 
 # wpml-name: c6c18f2bebcd07a6032c6eea54a1470e
 msgid "The list shows all the existing images in the preload folder (defined on settings page) and checks if each image name is SKU_index formatted."
-msgstr "La llista mostra totes les imatges existents a la carpeta de precàrrega (definida a la pàgina de configuració) i verifica si el nom de cada imatge respon al format SKU_índex."
+msgstr "La lista muestra todas las imágenes existentes en la carpeta de precarga (definida en la página de configuración) y verifica si el nombre de cada imagen responde al formato SKU_índice."
 
 # wpml-name: e5e5e74baec052194c755c44bb3caae8
 msgid "Can't upload this images: "
-msgstr "No es poden pujar aquestes imatges:"
+msgstr "No se pueden subir estas imágenes: "
 
 # wpml-name: c00d6a73a2dd8addf9b2dfe043d4aef2
 msgid "Upload images: "
-msgstr "Imatges pujades:"
+msgstr "Imágenes subidas:"
 
 # wpml-name: 98606f7f9b44cde6aea6ea71e91f4b8f
 msgid "The preload folder defined on plugin settings does not exist."
-msgstr "No existeix la carpeta de precàrrega definida a la configuració del plugin."
+msgstr "No existe la carpeta de precarga definida en la configuración del plugin."
 
 # wpml-name: 5c605568ca2fe72e99171925cffc7678
 msgid "Not defined preload folder on plugin settings."
-msgstr "No s'ha definit la carpeta de precàrrega a la configuració del plugin."
+msgstr "No se ha definido la carpeta de precarga en la configuración del plugin."
 
 # wpml-name: f13eb311b85c3f76389254ad1efac642
 msgid "Attach & Add selected items"
-msgstr "Vincular & Afegir els casos seleccionats"
+msgstr "Vincular & Añadir los casos seleccionados"
 
 # wpml-name: c630f023657fe0ab1cc2b0f8f2c024d1
 msgid "Unattached images"
-msgstr "Imatges no vinculades"
+msgstr "Imágenes no vinculadas"
 
 # wpml-name: d47418d543710d1105818a8d8306000e
 msgid "Remove the selected ones on last column <i>checkboxes</i> from <i>upload</i> folder."
-msgstr "Eliminar de la carpeta <i>upload</i> els casos seleccionats a les caselles de la darrera columna."
+msgstr "Eliminar de la carpeta <i>upload</i> los casos seleccionados en las casillas de la última columna."
 
 # wpml-name: 5e6c663a8cbf876a94eeeb3281754423
 msgid "Remove selected images"
-msgstr "Eliminar imatges seleccionades"
+msgstr "Eliminar imágenes seleccionadas"
 
 # wpml-name: d9debe462c2c6646d4cc931be4e0d067
 msgid "Attach & Replace with selected images"
-msgstr "Vincular & Reemplaçar amb les imatges seleccionades"
+msgstr "Vincular & Reemplazar con las imágenes seleccionadas"
 
 # wpml-name: 3ce0a224fd90957bc27b7b170a0d4728
 msgid "Attach & Add selected images"
-msgstr "Vincular & Afegir imatges seleccionades"
+msgstr "Vincular & Añadir imágenes seleccionadas"
 
 # wpml-name: 3f72cd1054719b07d060ac731a8d8657
 msgid "There may be images with SKU_index formated name on <i>wp-content/uploads</i> folder that hasn't been attached to correspondent SKU product. You can perform the following actions:"
-msgstr "Hi poden haver imatges amb el nom amb format SKU_índex a la carpeta <i>wp-content/uploads</i> que no han estat vinculats al producte SKU corresponent. Podeu fer-hi les següents accions:"
+msgstr "Pueden exisitir imágnees con el nombre con formato SKU_índice en la carpeta <i>wp-content/uploads</i> que no han sido vinculadas al producto SKU correspondiente. Podéis realizar las siguientes acciones:"
 
 # wpml-name: 3a57dc2f62df93efa967769cf29a25ad
 msgid "Unattached images on <i>uploads</i> folder"
-msgstr "Imatges no vinculades a la carpeta <i>uploads</i>"
+msgstr "Imágenes no vinculadas en la carpeta <i>uploads</i>"
 
 # wpml-name: 201ae4255808ddc32d06f674bc2233c2
 msgid "Duplicated references set to same index."
-msgstr "Hia ha referències duplicades al mateix índex."
+msgstr "Hay referencias duplicadas al mismo índice."
 
 # wpml-name: fb967f145bf77790fa9b2913c4ee351c
 msgid "No selected items"
-msgstr "No hi ha elements seleccionats"
+msgstr "No hay elementos seleccionados"
 
 # wpml-name: a34d82d0b77c76e0ac8a0e9f27833472
 msgid "Select any option"
-msgstr "Seleccioneu alguna opció"
+msgstr "Seleccionad alguna opción"
 
 # wpml-name: ba6fd1df188404f508a0b194edf4793a
 msgid ""
 "Existing product images will be removed. \n"
 "Do you agree?\n"
 msgstr ""
-"Les imatges existents del producte seran eliminades.\n"
-"Hi esteu d'acord?\n"
+"La imágenes existentes del producto seran eliminadas.\n"
+"¿Estáis de acuerdo?\n"
 
 # wpml-name: 31d66d17c15a0ee23ee1c2c33e9da570
 msgid ""
 "Selected images will be added to the product's existing ones. \n"
 "Do you agree?\n"
 msgstr ""
-"Les imatges seleccionades seran afegides a les existents del producte.\n"
-"Hi esteu d'acord?\n"
+"Las imágenes seleccionadas seran añadidas a las existentes del producto.\n"
+"¿Estáis de acuerdo?\n"
 
 # wpml-name: 61bc5a159f00aa34fab19b6f88a96ef3
 msgid "Do you want to remove the selected images?"
-msgstr "Voleu eliminar les imatges seleccionades?"
+msgstr "¿Queréis eliminar las imágenes seleccionadas?"
 
 # wpml-name: 2ef992970a741ce15aee017cf789f0e2
 msgid "Undefined SKU"
-msgstr "SKU no definit"
+msgstr "SKU no definido"
 
 # wpml-name: f148429e20767eed2d25ef7eb6092dee
 msgid "Not defined index on the image"
-msgstr "Imatge sense índex definit"
+msgstr "Imagen sin índice definido"
 
 # wpml-name: 914f71e937135bb72b3f9d8a404a219b
 msgid "Related SKU product without images"
-msgstr "Productes SKU relacionats sense imatges"
+msgstr "Productos SKU relacionados sin imágenes"
 
 # wpml-name: 40cd014b7b6251e3a22e6a45a73a64e1
 msgid "Execute"
-msgstr "Executar"
+msgstr "Ejectuar"
 
 # wpml-name: 13746d9fc8ef63d8c6e14a2ece4e5eaf
 msgid "Free SKU Product Image Attachments"
-msgstr "Adjunts de productes SKU no vinculats"
+msgstr "Adjuntos de productos SKU no vinculados"
 
 # wpml-name: f84288562b2003384e216567898840e3
 msgid "Remove the selected ones on last column <i>checkboxes</i>."
-msgstr "Eliminar els casos seleccionats a les caselles de la darrera columna"
+msgstr "Eliminar los casos seleccionados en las casillas de la última columna"
 
 # wpml-name: 882de9a300d0598a6e46f305bdc1df60
 msgid "Remove selected attachments"
-msgstr "Eliminar els adjunts seleccionats"
+msgstr "Eliminar los adjuntos seleccionados"
 
 # wpml-name: 00e9bc13d4ff58b9e17764c318b0c332
 msgid "Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>)."
-msgstr "Eliminar les imatges del producte (principal i galeria) i vincular-hi les seleccionades (caselles de la primera columna)."
+msgstr "Eliminar las imágenes del producto (principal y galería) y vincularle las seleccionadas (casillas de la primera columna)."
 
 # wpml-name: c30b6eadf873403f618332a844995b9a
 msgid "Replace with selected attachments"
-msgstr "Reemplaçar amb els adjunts seleccionats"
+msgstr "Reemplazar con los adjuntos seleccionados"
 
 # wpml-name: 79d79b9ec4d0cf7cd6e0cb644cfd2622
 msgid "Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist)."
-msgstr "Afegir les imatges seleccionades (caselles de la primera columna) a la galeria d'imatges existents del producte (així com també com a imatge principal si aquesta no existís)."
+msgstr "Añadir las imágenes seleccionadas (casillas de la primera columna) a la galería de imágenes existentes del producto (así como también como imagen principal si esta no existiese)."
 
 # wpml-name: 8a0b4483f6127691b11be29682ce6070
 msgid "Add selected attachments"
-msgstr "Afegir adjunts seleccionats"
+msgstr "Añadir adjuntos seleccionados"
 
 # wpml-name: 98483fd25c604af73853933d83ad9e19
 msgid "There may be attachments with SKU_index formated title but not linked to correspondent SKU product. You can perform the following actions:"
-msgstr "Hi poden haver arxius vinculats i amb el títol amb format SKU_index que no estiguin associats al producte SKU corresponent. Podeu realitzar les següents accions:"
+msgstr "Pueden existir archivos vinculados y con el título con formato SKU_índice que no estén asociados al producto SKU correspondiente. Podéis realizar las siguientes acciones:"
 
 # wpml-name: 2f11e0ff3380c536fe5d1c7cbd0393f2
 msgid "Can't attach this images: "
-msgstr "No es poden vincular aquestes imatges:"
+msgstr "No se pueden vincular estas imágenes"
 
 # wpml-name: ee5b2d7998726dc222f678e440f15466
 msgid "Attached images: "
-msgstr "Imatges vinculades: "
+msgstr "Imágenes vinculadas: "
 
 # wpml-name: 7830718d2caed8581660799fcf719fbe
 msgid "Can't delete this images: "
-msgstr "No es poden eliminar aquestes imatges: "
+msgstr "No se pueden eliminar estas imágenes: "
 
 # wpml-name: 5597e667f93ffdf267a85f90b52e15cd
 msgid "Deleted images: "
-msgstr "Imatges eliminades: "
+msgstr "Imágenes eliminadas: "
 
 # wpml-name: 80952ec3dde620451eec4ae740abcbe5
 msgid "Duplicated elements"
-msgstr "Elements duplicats"
+msgstr "Elementos duplicados"
 
 # wpml-name: 9daf1fb753b42c3cdc8f1d01669cd6d8
 msgid "Save Settings"
-msgstr "Desar configuració"
+msgstr "Guardar configuración"
 
 # wpml-name: 7278125be8c9aceaaf5d3f7645b45c5c
 msgid "Settings Saved"
-msgstr "Configuració desada"
+msgstr "Configuración guardada"
 
 # wpml-name: 2c552a4e331d8756193a53f1a0d65c8b
 msgid "For large-sized images you can set this value (in pixels) to resize them and make them lighter (default value: 600)."
-msgstr "Per imatges de grans dimensions poden establir aquest valor (en píxels) per redimensionar-les i fer-les més lleugeres (valor per defecte: 600)."
+msgstr "Para imágenes de grandes dimensiones podéis establecer este valor (en píxeles) para redimensionarlas y hacerlas más ligeras (valor por defecto: 600)."
 
 # wpml-name: a70f42c62c5ebf0a5cc5807b7d3e1dc1
 msgid "Optimized image size"
-msgstr "Mida per les imatges optimitzades"
+msgstr "Tamaño para las imágenes optimizadas"
 
 # wpml-name: 76474fdbf9e645f8d8b3b5d1bc2234ee
 msgid "Number of rows showed on images lists (default value: 20)"
-msgstr "Nombre de files de les llistes d'imatges (valor per defecte: 20)"
+msgstr "Número de filas de la listas de imágenes (valor por defecto:20)"
 
 # wpml-name: aaaa3c0a0086a0eedaf3350d3cfe92c1
 msgid "Items per page"
-msgstr "Elements per pàgina"
+msgstr "Elementos por página"
 
 # wpml-name: b507dfad02ac4a4e31fdf2e5070e1aa2
 msgid "Path to the directory where you upload your images via FTP"
-msgstr "Camí al directori on pugeu les vostres imatges via FTP"
+msgstr "Camino al directorio donde subires vuestras imágenes via FTP"
 
 # wpml-name: dd34f165782df0d18a9adbf07503c275
 msgid "Preload Folder"
-msgstr "Carpeta de precàrrega"
+msgstr "Carpeta de precarga"
 
 # wpml-name: f4f70727dc34561dfde1a3c529b6205c
 msgid "Settings"
-msgstr "Configuració"
+msgstr "Configuración"
 
 # wpml-name: 60b86c907c5ba625ff17039c246fb560
 msgid "Free attachments"
-msgstr "Adjunts lliures"
+msgstr "Adjuntos libres"
 
 # wpml-name: e12c9cdd458d7b09436ed9d8b914c624
 msgid "Free SKU attachments"
-msgstr "Adjunts SKU lliures"
+msgstr "Adjuntos SKU libres"
 
 # wpml-name: f03dae1c1c6c8af30048105bdb8de037
 msgid "Unattached"
-msgstr "No vinculades"
+msgstr "No vinculadas"
 
 # wpml-name: adced17046aa184e047846269768e7ec
 msgid "Unattached SKU images"
-msgstr "Imatges SKU desvinculades"
+msgstr "Imágenes SKU desvinculadas"
 
 # wpml-name: c990c7918ba99fc5a8b371ce574aa61f
 msgid "Pending uploads"
-msgstr "Càrregues pendents"
+msgstr "Cargas pendientes"
 
 # wpml-name: 4cdb27fa9b0aa9d82d9ee619bd4a3baa
 msgid "Woo SKU Images"

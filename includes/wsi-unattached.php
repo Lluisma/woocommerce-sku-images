@@ -271,16 +271,8 @@
 			$fileAtt = get_attached_file( $attachment->ID );
 			$nomAtt  = basename($fileAtt);
 
-			//$guidAtt = $attachment->guid;
-			//$nomAtt  = basename($guidAtt);
-
 			$sku_id  = wsi_normTitle($nomAtt);
 
-//			$arrAttach[ $sku_id[0] ] = $guidAtt;
-
-// Corregim errors amb metadades :
-$fileAtt = str_replace('/'.$upload_url.'/', '', $fileAtt);
-			
 			$arrAttach[ $sku_id[0] ] = $fileAtt;
 
 		}
@@ -313,29 +305,15 @@ $fileAtt = str_replace('/'.$upload_url.'/', '', $fileAtt);
 	        			$guidFile = str_replace($upload_dir, $upload_url, $path);
 
 	        			if (is_numeric($idxFile)) {
-//echo "<br>". $arrFile[0] . " : " . $arrAtt[ $arrFile[0] ] . " - " . $path;
 
 							if (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$path )) {
 
 								if (!isset($results[ $arrFile[0] ])) {
-//echo " *** 	";
-//var_dump($arrAtt[ $arrFile[0] ]);
-if ($arrFile[0]=='102_1') {
-echo "<br>* $arrFile[0] ". $guidFile;
-echo "<br>". $arrFile[0] . " : *" . $arrAtt[ $arrFile[0] ] . "* - *" . $path . "*";
-echo "<br>"; echo (isset($arrAtt[ $arrFile[0] ]));
-echo "<br>"; echo ($arrAtt[ $arrFile[0] ]!=$path );
-echo "<br>"; echo (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$path ));
-}
 	        						$results[ $arrFile[0] ] = $guidFile;
 
 	        					}
 
 							}
-//echo "<br> $guidFile";
-//						} else { 
-//
-//	        				$results[ $arrFile[0] ] = $guidFile;
 
 						}
 
@@ -384,22 +362,25 @@ echo "<br>"; echo (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$p
 
 	<h1>WooCommerce SKU Images : <?php echo __('Unattached images on <i>uploads</i> folder', 'woocommerce-sku-images' ); ?></h1>
 
-	<p><?php echo __('There may be images with SKU_index formated name on <i>wp-content/uploads</i> folder that hasn\'t been attached to correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
-
-	<p>
-		<b><?php echo __('Attach & Add selected images', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist).', 'woocommerce-sku-images' ); ?>
-	</p>
-		
-	<p>
-		<b><?php echo __('Attach & Replace with selected images', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>).', 'woocommerce-sku-images' ); ?>
-	</p>
-		
-	<p>
-		<b><?php echo __('Remove selected images', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Remove the selected ones on last column <i>checkboxes</i> from <i>upload</i> folder.', 'woocommerce-sku-images' ); ?>
-	</p>
+	<div class="wsi-callout">
+		<p><?php echo __('There may be images with SKU_index formated name on <i>wp-content/uploads</i> folder that hasn\'t been attached to correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
+		<a id="wsi-info" nohref>
+			<span class="dashicons dashicons-info"></span>
+			<?php echo __('Read more'); ?>...
+		</a>
+		<p class="wsi-info">
+			<b><?php echo __('Attach & Add selected images', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist).', 'woocommerce-sku-images' ); ?>
+		</p>
+		<p class="wsi-info">
+			<b><?php echo __('Attach & Replace with selected images', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>).', 'woocommerce-sku-images' ); ?>
+		</p>
+		<p class="wsi-info">
+			<b><?php echo __('Remove selected images', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Remove the selected ones on last column <i>checkboxes</i> from <i>upload</i> folder.', 'woocommerce-sku-images' ); ?>
+		</p>
+	</div>
 
 
 	<hr class="wsi_hr">
@@ -417,9 +398,9 @@ echo "<br>"; echo (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$p
 
 			<div class="alignleft">
 				<select id="wsi-option">
-					<option value="add"><?php echo __('Attach & Add selected items', 'woocommerce-sku-images'); ?></option>
-					<option value="replace"><?php echo __('Attach & Replace with selected items', 'woocommerce-sku-images'); ?></option>
-					<option value="delete"><?php echo __('Remove selected items from upload folder', 'woocommerce-sku-images'); ?></option>
+					<option value="add"><?php echo __('Attach & Add selected images', 'woocommerce-sku-images'); ?></option>
+					<option value="replace"><?php echo __('Attach & Replace with selected images', 'woocommerce-sku-images'); ?></option>
+					<option value="delete"><?php echo __('Remove selected images from upload folder', 'woocommerce-sku-images'); ?></option>
 				</select>
 
 				<button id="wsi-button" type="button" class="button action">
@@ -440,7 +421,7 @@ echo "<br>"; echo (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$p
 					<th><?php echo __('File'); ?></th>
 					<th>GUID</th>
 					<th>SKU</th>
-					<th><?php echo __('SKU published images','woocommerce-sku-images'); ?></th>
+					<th><?php echo __('Product attachments', 'woocommerce-sku-images'); ?></th>
 					<th><?php echo __('Comment'); ?></th>
 					<th><?php echo __('Remove'); ?> <input id="wsi-check-del" type="checkbox" /></th>
 				</tr>
@@ -522,7 +503,7 @@ echo "<br>"; echo (!isset($arrAtt[ $arrFile[0] ]) || ($arrAtt[ $arrFile[0] ]!=$p
 						<td><img src="' . $upload . '" width="50" />
 				        <td>' . $sku . '</td>
 						<td>' . ($arrImages[ $sku ]) . '</td>
-					  	<td>' . __('There is no product with this SKU','woocommerce-sku-images') . '</td>
+					  	<td>' . __('There are no products with this SKU','woocommerce-sku-images') . '</td>
 					  	<td><input data-src="' . $srcFile . '" type="checkbox" class="wsi-check-del"/></td>';
 
 			}
@@ -618,6 +599,10 @@ $( document ).ready(function() {
 		}
 
     });
+
+	$("#wsi-info").click( function(e) {
+		$(".wsi-info").toggle();
+	})
 
 });
 

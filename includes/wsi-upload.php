@@ -256,7 +256,8 @@
 					if ($published) {
 						$curr_product = array();
 						$curr_product['ID'] = $product_id;
-						$curr_product['post_status'] = 'publish';r
+						$curr_product['post_status'] = 'publish';
+
 						wp_update_post( $curr_product );
 					}
 
@@ -368,7 +369,7 @@
 
 				} else {
 
-					$tabFiles .= '<td></td><td>' . __('There are no products widh this SKU', 'woocommerce-sku-images') . '</td>';
+					$tabFiles .= '<td></td><td>' . __('There are no products with this SKU', 'woocommerce-sku-images') . '</td>';
 
 				}
 
@@ -403,25 +404,26 @@
 	
 	<h1>WooCommerce SKU Images : <?php echo __('Pending uploads', 'woocommerce-sku-images' ); ?></h2>
 
-	<p><?php echo __('The list shows all the existing images in the preload folder (defined on settings page) and checks if each image name is SKU_index formatted.', 'woocommerce-sku-images' ); ?></p>
-
-	<p><?php echo __('Images with a correct SKU could be renamed with the normalized name (removing blank spaces, dashes, parenthesis, etc...), resized and attached to the correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
-
-	<p>
-		<b><?php echo __('Upload & Add selected images', 'woocommerce-sku-images'); ?></b> :
-		<?php echo __('Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist).', 'woocommerce-sku-images' ); ?>
-	</p>
-		
-	<p>
-		<b><?php echo __('Upload & Replace with selected images', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>).', 'woocommerce-sku-images' ); ?>
-	</p>
-		
-	<p>
-		<b><?php echo __('Remove selected images from upload folder', 'woocommerce-sku-images'); ?></b> : 
-		<?php echo __('Remove the selected ones on last column <i>checkboxes</i>.', 'woocommerce-sku-images' ); ?>
-	</p>
-
+	<div class="wsi-callout">
+		<p><?php echo __('The list shows all the existing images in the preload folder (defined on settings page) and checks if each image name is SKU_index formatted.', 'woocommerce-sku-images' ); ?></p>
+		<p><?php echo __('Images with a correct SKU could be renamed with the normalized name (removing blank spaces, dashes, parenthesis, etc...), resized and attached to the correspondent SKU product. You can perform the following actions:', 'woocommerce-sku-images' ); ?></p>
+		<a id="wsi-info" nohref>
+			<span class="dashicons dashicons-info"></span>
+			<?php echo __('Read more'); ?>...
+		</a>
+		<p class="wsi-info">
+			<b><?php echo __('Upload & Add selected images', 'woocommerce-sku-images'); ?></b> :
+			<?php echo __('Add the selected images (first column <i>checkboxes</i>) to the existing gallery product images (even the first one as thumbnail if it does not exist).', 'woocommerce-sku-images' ); ?>
+		</p>
+		<p class="wsi-info">
+			<b><?php echo __('Upload & Replace with selected images', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Remove the existing product images (thumbnail and gallery) and attach the selected ones (first column <i>checkboxes</i>).', 'woocommerce-sku-images' ); ?>
+		</p>
+		<p class="wsi-info">
+			<b><?php echo __('Remove selected images from upload folder', 'woocommerce-sku-images'); ?></b> : 
+			<?php echo __('Remove the selected ones on last column <i>checkboxes</i>.', 'woocommerce-sku-images' ); ?>
+		</p>
+	</div>
 	
 	<h2><?php echo $numFiles; ?> <?php echo __('Pending images', 'woocommerce-sku-images'); ?></h2>
 
@@ -551,6 +553,10 @@ $( document ).ready(function() {
 		}
 
     });
+
+	$("#wsi-info").click( function(e) {
+		$(".wsi-info").toggle();
+	})
 
 });
 
