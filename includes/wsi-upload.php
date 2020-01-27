@@ -483,7 +483,7 @@
 
 <script type="text/javascript">
 
-$( document ).ready(function() {
+jQuery(document).ready(function($) {
 
 
     $("#wsi-check-del").toggle(
